@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F _ C - Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <!------------------------------- SEZIONE TESTATA CON MENU ----------------------------------->
+    <section>
+
+        <div class="navigation">
+            
+            <a id="links" href="#">Home</a>
+            <a id="links" href="#works">Works</a>
+            <a id="links" href="#about_me">About me</a>
+            <a id="links" href="#contacts">Contact</a>
+        </div>
+
+        <div class="container">
+
+            <div class="content">
+                
+                <h1>Francesca Cantale</h1>
+                
+                <span>Front-End Developer <br>| Portfolio |</span>
+                
+            </div>
+
+        </div>
+ 
+                
+        <svg class="arrows">
+            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+        </svg>
+    </section>
+    <!-------------------------- /SEZIONE TESTATA E MENU ------------------------------------------->
+    <!-------------------------------- CONTENUTO PRINCIPALE ----------------------------------------------->
+    <div id="works">
+        <div class="container_2 box">
+            <div class="content_2">
+                <a href="works.html"><img src="assets/img/works.jpg" alt="" srcset=""></a>
+            </div>
+
+        </div>
+        <div class="container_2">
+            <h2>01 | Works</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias minima laborum pariatur
+                inventore dolore blanditiis exercitationem facilis error architecto ipsam perferendis deserunt,
+                ducimus tempora incidunt necessitatibus, voluptate illum itaque quas!</span>
+        </div>
+
+    </div>
+    <div id="about_me">
+        <div class="container_3">
+            <h2>02 | About me</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias minima laborum pariatur
+                inventore dolore blanditiis exercitationem facilis error architecto ipsam perferendis deserunt,
+                ducimus tempora incidunt necessitatibus, voluptate illum itaque quas!</span>
+        </div>
+        <div class="container_2 box">
+            <div class="content_2">
+                <a href="about_me.html"><img src="assets/img/about_me.jpg" alt="" srcset=""></a>
+            </div>
+        </div>
+    </div>
+    <div id="contacts">
+        <div class="container_2 box">
+            <div class="content_2">
+            <a href="contact.html"><img src="assets/img/contact.jpg" alt="" srcset=""></a>
+            </div>
+
+        </div>
+        <div class="container_2">
+            <h2>03 | Contact</h2>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias minima laborum pariatur
+                inventore dolore blanditiis exercitationem facilis error architecto ipsam perferendis deserunt,
+                ducimus tempora incidunt necessitatibus, voluptate illum itaque quas!</span>
+        </div>
+        <!---------------------------------------- / CONTENUTO PRINCIPALE ------------------------------------------------------->
+        <!-------------------------------- FOOTER ------------------------------------------------>
+    </div>
+    
+<footer class="footer">
+        <div class="contenitore">
+            <div class="info_logo">
+                    <a href="#">
+                        <h3>F_C</h3>
+                        <p>Front-end Developer</p>
+                    </a>
+                    <div class="dettagli">
+                        <a href="https://www.linkedin.com/in/francesca-cantale-30730b182/" target="_blank"><i class="fab fa-linkedin fa-2x">Francesca Cantale</i></a>
+                        </p>
+                    </div>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+    <!------------------- / FOOTER -------------------------------------->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".box"), {
+            max: 5,
+            speed: 400,
+            easing: "cubic-bezier(.02,.95,.50,.97)",
+            perspective: 500,
+            glare: true,
+            "max-glare": 0.2
+        });
+    </script>
+    <script>
+    </script>
+</body>
+
+</html>
