@@ -169,10 +169,10 @@ a .btn {
     /* backdrop-filter: blur(5px); */
 }
 
-.content_2 a img {
+/* .content_2 a img {
   position: absolute;
   width: 70%;
-}
+} */
 
 #works span {
   text-transform: capitalize;
@@ -261,14 +261,14 @@ a .btn {
   text-overflow: ellipsis;
 }
 
-
+/* 
 .content_2 img {
   transition: all .1s ease-in-out;
 }
 
 .content_2 img:hover {
   transform: scale(1.3);
-}
+} */
 
 .footer {
   display: flex;
