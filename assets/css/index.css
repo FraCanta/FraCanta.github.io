@@ -627,17 +627,189 @@ a .btn {
 /* --------------- Responsive -------------------- */
 
 @media screen and (max-width: 768px) {
+  
   .navBar {
-    display: none;
+    display: block;
   }
 
   .hamburger {
-    position: absolute;
-    top: 50%;
-    right: 10%;
-    left: auto;
+    padding: 10px;
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #eee;
+    margin: 5px 0;
   }
 
+  .hamburger span:nth-child(1) {
+    transform: rotate(0deg);
+    transition: all 0.3s 0.1s;
+  }
+
+  /* .hamburger span:nth-child(2) {
+    opacity: 0;
+  } */
+
+  .hamburger span:nth-child(3) {
+    transform: rotate(0deg);
+    transition: all 0.3s;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+
+  .hamburger.close span:nth-child(1) {
+    transform: rotate(0deg);
+  }
+
+  .hamburger.close span:nth-child(2) {
+    opacity: 1;
+  }
+
+  .hamburger.close span:nth-child(3) {
+    transform: rotate(0deg);
+  }
+
+  @keyframes open {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes close {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+
+
+
+
+  .navBar ul li {
+    display: none;
+  }
+
+  .navBar ul li a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 1.5em;
+    color: #eee;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .navBar ul li a:hover {
+    color: #507a7a;
+  }
+
+  .navBar ul li a.active {
+    color: #507a7a;
+  }
+
+  .navBar ul li a.active:hover {
+    color: #507a7a;
+  }
+
+  .navBar ul li a.active:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #507a7a;
+    left: 0;
+    bottom: -10px;
+    transition: all 0.3s;
+  }
+
+  .navBar ul li a:hover:after {
+    bottom: -10px;
+  }
+
+  .navBar ul li a.active:after {
+    bottom: 0;
+  }
+
+  .navBar ul li a.active:hover:after {
+    bottom: 0;
+  }
+
+  .navBar ul li a.active:hover {
+    color: #507a7a;
+  }
+
+  .navBar ul li a.active:hover {
+    color: #507a7a;
+  }
+
+  .navBar ul li a.active:hover:after {
+    bottom: 0;
+  }
+
+  .hero {
+    height:250px;
+}
+
+.hero h1 {
+  font-size: 30px;
+  position: relative;
+  z-index: 1;
+  color: #162b3f;
   
+}
+
+.hero h2 {
+  font-size: 15px;
+  position: relative;
+  z-index: 1;
+  color: #162b3f;
+}
+
+
+
+.container {
+  flex-direction: column;
+}
+
+.illustration {
+  position: absolute;
+  z-index: 0;
+  height: 600px;
+}
+
+#works {
+  min-height: 0;
+}
+
+.container_2{
+  max-width: 500px;
+}
+
+#works h2 {
+  font-size: 30px;
+}
+
+#works span {
+  font-size: 15px;
+}
 
 }
