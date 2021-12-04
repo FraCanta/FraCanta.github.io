@@ -346,6 +346,8 @@ a .btn {
   letter-spacing: 2px;
   text-overflow: ellipsis;
   text-align: center;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .dettagli a {
