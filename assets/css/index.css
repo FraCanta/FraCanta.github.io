@@ -29,7 +29,7 @@ section {
 }
 
 
-section::after {
+/* section::after {
   content: '';
   position: absolute;
   top: 0;
@@ -38,7 +38,7 @@ section::after {
   height: 86%;
   background: linear-gradient(#162b3fcb, #4c757559);
   clip-path: polygon(0% 15%, 45% 15%, 60% 62%, 45% 100%, 0% 100%);
-}
+} */
 
 
 .container {
