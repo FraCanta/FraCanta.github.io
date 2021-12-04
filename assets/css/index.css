@@ -770,7 +770,7 @@ a .btn {
 }
 
 .hero h1 {
-  font-size: 30px;
+  font-size: 36px;
   position: relative;
   z-index: 1;
   color: #162b3f;
@@ -778,12 +778,25 @@ a .btn {
 }
 
 .hero h2 {
-  font-size: 15px;
+  font-size: 18px;
   position: relative;
   z-index: 1;
   color: #162b3f;
 }
 
+.hero button {
+  position: relative;
+  z-index: 1;
+  background: #162b3f;
+  color: #eee;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+  width: 50%;
+}
 
 
 .container {
