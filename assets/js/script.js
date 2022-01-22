@@ -121,6 +121,7 @@ insertLibro();
 
 function mostraModal() {
   document.getElementById("modal").style.display = "block";
+  document.getElementById("modal").style.background = "rgba(0,0,0,0.5)";
 }
 
 // chiudi modal
@@ -135,7 +136,7 @@ function cercaLibri() {
   let libri = document.getElementsByClassName("card");
   for (let i = 0; i < libri.length; i++) {
     if (libri[i].innerHTML.includes(cerca)) {
-      libri[i].style.display = "flex";
+      libri[i].style.display = "block";
       libri[i].style.height = "100%";
     } else {
       libri[i].style.display = "none";
