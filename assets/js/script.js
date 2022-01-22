@@ -39,6 +39,26 @@ libreria = [
     "prezzo4",
     "quantità4"
   ),
+  new libro(
+    "libro5",
+    "autor5",
+    "editorial5",
+    "genere5",
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore suscipit in hic veritatis?",
+    "https://images.unsplash.com/photo-1542871793-fd7e2b3cd0b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=752&q=80",
+    "prezzo4",
+    "quantità4"
+  ),
+  new libro(
+    "libro6",
+    "autor6",
+    "editorial6",
+    "genere6",
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore suscipit in hic veritatis?",
+    "https://images.unsplash.com/photo-1542871793-fd7e2b3cd0b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=752&q=80",
+    "prezzo4",
+    "quantità4"
+  ),
 ];
 
 function libro(
@@ -70,10 +90,25 @@ function insertLibro() {
     <div class="card-body">
     <h5 class="card-title">${libro.titulo}</h5>
     <p class="card-text">${libro.descripcion}</p>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Dettagli
-    </button>
     
+    <button type="button" class="btn btn-primary"
+    onclick="mostraModal()">
+    Dettagli</button>
+    <div class="modal" id="modal">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <button type="button" class="btn btn-primary close" data-dismiss="modal" onclick="chiudiModal()">&times;</button>
+    </div>
+    <div class="modal-body">
+    <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
+    <p class="card-text">${libro.descripcion}</p>
+    </div>
+
+</div>
+    <div class="card-footer">
+    <small class="text-muted">${libro.autor}</small>
+    </div>
     </div>
         `;
   }
@@ -81,15 +116,32 @@ function insertLibro() {
 
 insertLibro();
 
-function cercaLibro () {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("search");
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("cards");
-  li = ul.getElementsByTagName("li");
-  for (i = 0; i < li.length; i++) {
 
-  }
+// modal dettagli di ogni libro
+
+function mostraModal() {
+  document.getElementById("modal").style.display = "block";
+}
+
+// chiudi modal
+function chiudiModal() {
+  document.getElementById("modal").style.display = "none";
 }
 
 
+
+function cercaLibri() {
+  let cerca = document.getElementById("cerca").value;
+  let libri = document.getElementsByClassName("card");
+  for (let i = 0; i < libri.length; i++) {
+    if (libri[i].innerHTML.includes(cerca)) {
+      libri[i].style.display = "flex";
+      libri[i].style.height = "100%";
+    } else {
+      libri[i].style.display = "none";
+    }
+  }
+  // dopo aver cercato pulisco il campo di ricerca
+  document.getElementById("cerca").value = "";
+
+  }
