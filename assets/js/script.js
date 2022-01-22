@@ -66,8 +66,14 @@ function insertLibro() {
     <div class="card">
     <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
     <div class="card-body">
-      <h5 class="card-title">${libro.titulo}</h5>
-      
+    <h5 class="card-title">${libro.titulo}</h5>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+    onclick="mostrarLibro('${libro.autor}','${libro.editorial}','${libro.genero}','${libro.descripcion}','${libro.precio}'">
+    Vedi dettagli
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <p>${libro.descripcion}</p>
+    </div>
     </div>
         `;
   }
