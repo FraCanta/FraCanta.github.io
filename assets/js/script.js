@@ -87,11 +87,12 @@ function insertLibro() {
     document.getElementById("cards").innerHTML += `
     <div class="card">
     <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
-    <div class="card-body">
+    <div class="card-body pt-4 mb-3">
     <h5 class="card-title">${libro.titulo}</h5>
     <button type="button" class="btn btn-primary"
     onclick="mostraModal()">
     Dettagli</button>
+    
     <div class="modal" id="modal">
     <div class="modal-dialog">
     <div class="modal-content">
@@ -99,7 +100,7 @@ function insertLibro() {
     <button type="button" class="btn btn-primary close" data-dismiss="modal" onclick="chiudiModal()">&times;</button>
     </div>
     <div class="modal-body">
-    <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
+    <img src="${libro.imagen}" class="card-img-top" alt="..." ">
     <p class="card-text">${libro.descripcion}</p>
     </div>
 
@@ -107,7 +108,9 @@ function insertLibro() {
     <div class="card-footer">
     <small class="text-muted">${libro.autor}</small>
     </div>
+    
     </div>
+    
         `;
   }
 }
@@ -134,13 +137,17 @@ function cercaLibri() {
   for (let i = 0; i < libri.length; i++) {
     if (libri[i].innerHTML.includes(cerca)) {
       libri[i].style.display = "flex";
-      libri[i].style.height = "100%";
+    libri[i].style.height = "50vh";
+    libri[i].style.button = "block";
+
     } else {
       libri[i].style.display = "none";
     }
   }
   // dopo aver cercato pulisco il campo di ricerca
   document.getElementById("cerca").value = "";
-  mostraModal();
+  }
 
+  function tornaIndietro() {
+    window.location.reload();
   }
