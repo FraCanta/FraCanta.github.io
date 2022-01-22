@@ -96,7 +96,7 @@
     padding: 20px;
 }
 
-.container h2, .container p {
+.container .books_title, .container .books_desc {
     margin-left: 30px;
 }
 #cards {
