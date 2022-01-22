@@ -89,8 +89,6 @@ function insertLibro() {
     <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
     <div class="card-body">
     <h5 class="card-title">${libro.titulo}</h5>
-    <p class="card-text">${libro.descripcion}</p>
-    
     <button type="button" class="btn btn-primary"
     onclick="mostraModal()">
     Dettagli</button>
@@ -130,13 +128,12 @@ function chiudiModal() {
 }
 
 
-
 function cercaLibri() {
   let cerca = document.getElementById("cerca").value;
   let libri = document.getElementsByClassName("card");
   for (let i = 0; i < libri.length; i++) {
     if (libri[i].innerHTML.includes(cerca)) {
-      libri[i].style.display = "block";
+      libri[i].style.display = "flex";
       libri[i].style.height = "100%";
     } else {
       libri[i].style.display = "none";
@@ -144,5 +141,6 @@ function cercaLibri() {
   }
   // dopo aver cercato pulisco il campo di ricerca
   document.getElementById("cerca").value = "";
+  mostraModal();
 
   }
