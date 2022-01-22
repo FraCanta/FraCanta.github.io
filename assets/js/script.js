@@ -5,7 +5,7 @@ libreria = [
     "editorial1",
     "genere1",
     "descrizione1",
-    "img1",
+    "https://images.unsplash.com/photo-1610882648335-ced8fc8fa6b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     "prezzo1",
     "quantità1"
   ),
@@ -15,7 +15,7 @@ libreria = [
     "editorial2",
     "genere2",
     "descrizione2",
-    "img2",
+    "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
     "prezzo2",
     "quantità2"
   ),
@@ -25,7 +25,7 @@ libreria = [
     "editorial3",
     "genere3",
     "descrizione3",
-    "img3",
+    "https://images.unsplash.com/photo-1598618253208-d75408cee680?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
     "prezzo3",
     "quantità3"
   ),
@@ -35,7 +35,7 @@ libreria = [
     "editorial4",
     "genere4",
     "descrizione4",
-    "img4",
+    "https://images.unsplash.com/photo-1542871793-fd7e2b3cd0b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=752&q=80",
     "prezzo4",
     "quantità4"
   ),
@@ -62,17 +62,13 @@ function libro(
 }
 function insertLibro() {
   for (const libro of libreria) {
-    document.getElementById("table").innerHTML += `
-        <tr>
-            <td>${libro.titulo}</td>
-            <td>${libro.autor}</td>
-            <td>${libro.editorial}</td>
-            <td>${libro.genero}</td>
-            <td>${libro.descripcion}</td>
-            <td>${libro.imagen}</td>
-            <td>${libro.precio}</td>
-            <td>${libro.cantidad}</td>
-        </tr>
+    document.getElementById("cards").innerHTML += `
+    <div class="card">
+    <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
+    <div class="card-body">
+      <h5 class="card-title">${libro.titulo}</h5>
+      
+    </div>
         `;
   }
 }

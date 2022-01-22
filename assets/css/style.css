@@ -86,6 +86,25 @@
     margin: 10px;
     padding: 20px;
 }
+.contenitore {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    padding: 20px;
+}
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    grid-auto-rows: minmax(300px, auto);
+    grid-auto-flow: dense;
+}
 
 
 @media (max-width: 768px) {
