@@ -73,16 +73,7 @@ function insertLibro() {
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     Dettagli
     </button>
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <p>${libro.titulo}</p>
-    <p>${libro.autor}</p>
-    <p>${libro.editorial}</p>
-    <p>${libro.genero}</p>
-    <p>${libro.precio}</p>
-    <p>${libro.cantidad}</p>
-    </div>
     
-    </div>
     </div>
         `;
   }
@@ -90,16 +81,15 @@ function insertLibro() {
 
 insertLibro();
 
+function cercaLibro () {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("search");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("cards");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
 
-function cercaLibro() {
-  // search libro
-  var search = document.getElementById("cerca").value;
-  var libro = libreria.filter(function (libro) {
-    return libro.titulo.toLowerCase().indexOf(search.toLowerCase()) != -1;
-  });
-  cercaLibro(libro);
   }
-
-
+}
 
 
