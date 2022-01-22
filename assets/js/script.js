@@ -4,7 +4,7 @@ libreria = [
     "autor1",
     "editorial1",
     "genere1",
-    "descrizione1",
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore suscipit in hic veritatis?",
     "https://images.unsplash.com/photo-1610882648335-ced8fc8fa6b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     "prezzo1",
     "quantità1"
@@ -14,7 +14,7 @@ libreria = [
     "autor2",
     "editorial2",
     "genere2",
-    "descrizione2",
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore suscipit in hic veritatis?",
     "https://images.unsplash.com/photo-1621351183012-e2f9972dd9bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
     "prezzo2",
     "quantità2"
@@ -24,7 +24,7 @@ libreria = [
     "autor3",
     "editorial3",
     "genere3",
-    "descrizione3",
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore suscipit in hic veritatis?",
     "https://images.unsplash.com/photo-1598618253208-d75408cee680?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
     "prezzo3",
     "quantità3"
@@ -34,7 +34,7 @@ libreria = [
     "autor4",
     "editorial4",
     "genere4",
-    "descrizione4",
+    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore suscipit in hic veritatis?",
     "https://images.unsplash.com/photo-1542871793-fd7e2b3cd0b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=752&q=80",
     "prezzo4",
     "quantità4"
@@ -60,6 +60,8 @@ function libro(
   this.precio = precio;
   this.cantidad = cantidad;
 }
+
+
 function insertLibro() {
   for (const libro of libreria) {
     document.getElementById("cards").innerHTML += `
@@ -67,6 +69,18 @@ function insertLibro() {
     <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
     <div class="card-body">
     <h5 class="card-title">${libro.titulo}</h5>
+    <p class="card-text">${libro.descripcion}</p>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Dettagli
+    </button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <p>${libro.titulo}</p>
+    <p>${libro.autor}</p>
+    <p>${libro.editorial}</p>
+    <p>${libro.genero}</p>
+    <p>${libro.precio}</p>
+    <p>${libro.cantidad}</p>
+    </div>
     
     </div>
     </div>
@@ -80,13 +94,11 @@ insertLibro();
 function cercaLibro() {
   // search libro
   var search = document.getElementById("cerca").value;
-  console.log(search);
   var libro = libreria.filter(function (libro) {
-    if(filter == libro.titulo){
-      return libro.titulo;
-    }
+    return libro.titulo.toLowerCase().indexOf(search.toLowerCase()) != -1;
   });
-}
+  cercaLibro(libro);
+  }
 
 
 

@@ -27,23 +27,6 @@
     font-size: 20px;
 }
 
-.contact {
-    float: right;
-    color: #f2f2f2;
-    font-weight: bold;
-    padding: 10px;
-    text-decoration: none;
-    border: 2px solid #f2f2f2;
-    margin-right: 20px;
-}
-
-.contact:hover {
-    background-color: #2c16a7;
-    border: none;
-    color: #ffffff;
-}
-
-
 .hero {
     width: 100%;
     min-height: 50vh;
@@ -59,8 +42,8 @@
     color: #fff;
     font-size: 3rem;
     text-transform: uppercase;
-    letter-spacing: .1rem;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    letter-spacing: .5rem;
+    line-height: 1.5;
 }
 
 .hero p {
