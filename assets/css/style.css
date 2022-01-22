@@ -4,8 +4,12 @@
 }
 
 .navbar {
-    background-color: rgb(19, 55, 95);
+   
     overflow: hidden;
+}
+
+.navbar-toggler {
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -85,9 +89,7 @@
 
 
 @media (max-width: 768px) {
-    .navbar {
-        display: flex;
-        flex-direction: row;
+    nav {
     }
 
     .hero h1 {
