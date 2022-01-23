@@ -103,7 +103,7 @@ function insertLibro() {
     </div>
     <div class="modal-body">
     <img src="${libro.immagine}" class="card-img-top" alt="..." widt= "100%" height = "100%">
-    <p>Titolo: ${libro.descrizione}</p>
+    <p>Descrizione: ${libro.descrizione}</p>
     </div>
 
 </div>
