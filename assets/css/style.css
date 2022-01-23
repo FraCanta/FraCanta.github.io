@@ -123,15 +123,16 @@
 
 .box-body {
     
-    width: 100%;
-    height: auto;
+    width: 50%;
+    height: 150px;
     background-color: #fff;
     padding: 20px;
-    top: 50%;
+    top: 100%;
     left: 50%;
+    bottom: 0;
     position: absolute;
     transform: translate(-50%, -50%);
-    margin-top: 25px;
+    margin-top: 40px;
     border: 3px dashed rgb(255, 255, 255);
     border-radius: 20px;
     background-color: rgb(60, 60, 139);
@@ -196,6 +197,9 @@
         margin-left: 10px;
     }
     .box-body {
-      
+        width: 100%;
+        padding: 7px;
+        height: 108px;
+        margin-top: 10px;
     }
 }
