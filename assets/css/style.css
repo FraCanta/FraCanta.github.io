@@ -186,4 +186,7 @@
     .intro {
         margin-left: 10px;
     }
+    .scroll_up {
+        display: none;
+    }
 }
