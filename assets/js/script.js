@@ -83,27 +83,27 @@ function libro(
 
 
 function insertLibro() {
-  for (const libro of libreria) {
+  var count = 0;
+  for (libro of libreria) {
+  count++;
     document.getElementById("cards").innerHTML += `
     <div class="card">
     <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
     <div class="card-body pt-4 mb-3">
     <h5 class="card-title">${libro.titulo}</h5>
     <button type="button" class="btn btn-primary"
-    onclick="mostraModal()">
+    onclick="mostraModal(${count})">
     Dettagli</button>
     
-    <div class="modal" id="modal">
+    <div class="modal" id="modal${count}">
     <div class="modal-dialog">
     <div class="modal-content">
     <div class="modal-header">
-    <button type="button" class="btn btn-primary close" data-dismiss="modal" onclick="chiudiModal()">&times;</button>
+    <button type="button" class="btn btn-primary close" data-dismiss="modal" onclick="chiudiModal(${count})">&times;</button>
     </div>
     <div class="modal-body">
-    
-          <img src="${libro.imagen}" class="card-img-top" alt="..." ">
-          <p class="card-text">${libro.descripcion}</p>
-    
+    <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
+    <p>Titolo: ${libro.descripcion}</p>
     </div>
 
 </div>
@@ -119,25 +119,26 @@ function insertLibro() {
 
 insertLibro();
 
-
 // modal dettagli di ogni libro
 
-function mostraModal() {
-    document.getElementById("modal").style.display = "block";
-    document.getElementById("modal").style.background = "rgba(0,0,0,0.5)";
+function mostraModal(count) {
+    document.getElementById(`modal${count}`).style.display = "block";
+    document.getElementById(`modal${count}`).style.background = "rgba(0,0,0,0.5)";
 }
 
-// chiudi modal
-function chiudiModal() {
-  document.getElementById("modal").style.display = "none";
+function chiudiModal(count) {
+  document.getElementById(`modal${count}`).style.display = "none";
 }
 
 
 function cercaLibri() {
+
   let cerca = document.getElementById("cerca").value;
   let libri = document.getElementsByClassName("card");
+  if (cerca !== "") {
+    
   for (let i = 0; i < libri.length; i++) {
-    if (libri[i].innerHTML.includes(cerca)) {
+    if (libri[i].innerHTML.includes(cerca.trim().toLowerCase())) {
       libri[i].style.display = "flex";
     libri[i].style.height = "50vh";
     libri[i].style.button = "block";
@@ -146,6 +147,7 @@ function cercaLibri() {
       libri[i].style.display = "none";
     }
   }
+}
   // dopo aver cercato pulisco il campo di ricerca
   document.getElementById("cerca").value = "";
   }
@@ -179,3 +181,6 @@ function scrollUp() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+// drag and drop 
