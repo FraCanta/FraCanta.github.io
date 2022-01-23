@@ -19,7 +19,7 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://francescacantale.netlify.app/" target = "_blank">
+            <a class="navbar-brand" href="https://francescacantale.netlify.app/" target = "_blank" rel="nooper" >
                 <img src="assets/img/book-solid.svg"  width="28" height="28" class="d-inline-block align-top" alt="">
                 BOOKS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -186,6 +186,7 @@
                     <p>Se hai una storia da farci leggere, non lasciarla nel tuo cassetto. Mandaci semplicemente qui il
                         tuo racconto.</p>
                 </div>
+                <!-- Box drag and drop -->
                 <div class="col-sm-12 col-md-12">
                     <div class="container">
                         <div class="box">
@@ -196,19 +197,27 @@
                             </div>
                         </div>
                     </div>
-                    <!-- box drag and drop -->
+                    <!-- end box drag and drop -->
 
                 </div>
             </div>
         </div>
 
     </main>
+    <div class="scroll_up" id="scrollUp">
+        <button onclick="scrollUp()">
+            <img src="assets/img/arrow-up-circle-fill.svg" width="30px" height="30px" />
+        </button>
+        </div>
     <!-- Footer -->
     <footer class="bg-dark text-center text-white">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <p>Copyright &copy; Your Website 2022</p>
+                <div class="col-md-12 footer_logo">
+                    <p>Copyright &copy;</p>
+                <a href="https://francescacantale.netlify.app/" target = "_blank" rel="nooper" >
+                        <img src="assets/img/book-solid.svg"  width="15" height="15" class="d-inline-block align-top" alt="">
+                        BOOKS 2022</a>
                 </div>
             </div>
     </footer>
