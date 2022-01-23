@@ -62,23 +62,23 @@ libreria = [
 ];
 
 function libro(
-  titulo,
-  autor,
-  editorial,
-  genero,
-  descripcion,
-  imagen,
-  precio,
-  cantidad
+  titolo,
+  autore,
+  editoriale,
+  genere,
+  descrizione,
+  immagine,
+  prezzo,
+  quantità
 ) {
-  this.titulo = titulo;
-  this.autor = autor;
-  this.editorial = editorial;
-  this.genero = genero;
-  this.descripcion = descripcion;
-  this.imagen = imagen;
-  this.precio = precio;
-  this.cantidad = cantidad;
+  this.titolo = titolo;
+  this.autore = autore;
+  this.editoriale = editoriale;
+  this.genere = genere;
+  this.descrizione = descrizione;
+  this.immagine = immagine;
+  this.prezzo = prezzo;
+  this.quantità = quantità;
 }
 
 
@@ -88,9 +88,9 @@ function insertLibro() {
   count++;
     document.getElementById("cards").innerHTML += `
     <div class="card">
-    <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
+    <img src="${libro.immagine}" class="card-img-top" alt="..." widt= "100%" height = "100%">
     <div class="card-body pt-4 mb-3">
-    <h5 class="card-title">${libro.titulo}</h5>
+    <h5 class="card-title">${libro.titolo}</h5>
     <button type="button" class="btn btn-primary"
     onclick="mostraModal(${count})">
     Dettagli</button>
@@ -102,13 +102,13 @@ function insertLibro() {
     <button type="button" class="btn btn-primary close" data-dismiss="modal" onclick="chiudiModal(${count})">&times;</button>
     </div>
     <div class="modal-body">
-    <img src="${libro.imagen}" class="card-img-top" alt="..." widt= "100%" height = "100%">
-    <p>Titolo: ${libro.descripcion}</p>
+    <img src="${libro.immagine}" class="card-img-top" alt="..." widt= "100%" height = "100%">
+    <p>Titolo: ${libro.descrizione}</p>
     </div>
 
 </div>
     <div class="card-footer">
-    <small class="text-muted">${libro.autor}</small>
+    <small class="text-muted">${libro.autore}</small>
     </div>
     
     </div>
