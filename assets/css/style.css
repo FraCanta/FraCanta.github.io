@@ -105,6 +105,33 @@
     grid-auto-rows: minmax(300px, auto);
     grid-auto-flow: dense;
 }
+
+.writers {
+    height: 30vh;
+    background-color: rgb(159, 192, 173);
+    padding: 20px;
+    color: rgb(68, 67, 67);
+    position: relative;
+    
+}
+
+.box {
+    height: 100px;
+    width: 700px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    margin-top: 20px;
+    border: 3px dashed rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: rgb(60, 60, 139);
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
  footer {
     padding: 20px;
     text-align: center;

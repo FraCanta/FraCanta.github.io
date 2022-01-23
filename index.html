@@ -19,8 +19,8 @@
 <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/book-solid.svg" width="28" height="28" class="d-inline-block align-top" alt="">
+            <a class="navbar-brand" href="https://francescacantale.netlify.app/" target = "_blank">
+                <img src="assets/img/book-solid.svg"  width="28" height="28" class="d-inline-block align-top" alt="">
                 BOOKS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -141,7 +141,7 @@
                                 illum, quibusdam iure natus odio enim?
                                 <a href="#">Leggi</a>
                             </li>
-                            
+
 
                         </ul>
                     </div>
@@ -155,8 +155,8 @@
                             <button type="button" class="btn btn-primary mt-3" onclick="cercaLibri()">Cerca</button>
 
                         </form>
-                        
-                        
+
+
 
 
                     </div>
@@ -170,11 +170,34 @@
 
                     </div>
                     <div class="container mx-2 mt-5 mb-5">
-                        <button type="button" id="back" class="btn btn-primary" onClick="tornaIndietro()"> 
+                        <button type="button" id="back" class="btn btn-primary" onClick="tornaIndietro()">
                             Torna indietro
-                            </button>
+                        </button>
                     </div>
-                   
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container writers mb-5">
+            <div class="raw">
+                <div class="col-sm-12 col-md-12 align-center text-center">
+                    <h2>Sezione Scrittori Emergenti</h2>
+                    <p>Se hai una storia da farci leggere, non lasciarla nel tuo cassetto. Mandaci semplicemente qui il
+                        tuo racconto.</p>
+                </div>
+                <div class="col-sm-12 col-md-12">
+                    <div class="container">
+                        <div class="box">
+                            <div class="box-body" id="dragNdrop" >
+                                <h5>Drag and drop</h5>
+                                <input type="file" id="fileInput" name="file" />
+                                <input type="button" id="upload" value="Upload" onclick="upLoad()"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- box drag and drop -->
+
                 </div>
             </div>
         </div>

@@ -100,8 +100,10 @@ function insertLibro() {
     <button type="button" class="btn btn-primary close" data-dismiss="modal" onclick="chiudiModal()">&times;</button>
     </div>
     <div class="modal-body">
-    <img src="${libro.imagen}" class="card-img-top" alt="..." ">
-    <p class="card-text">${libro.descripcion}</p>
+    
+          <img src="${libro.imagen}" class="card-img-top" alt="..." ">
+          <p class="card-text">${libro.descripcion}</p>
+    
     </div>
 
 </div>
@@ -121,8 +123,8 @@ insertLibro();
 // modal dettagli di ogni libro
 
 function mostraModal() {
-  document.getElementById("modal").style.display = "block";
-  document.getElementById("modal").style.background = "rgba(0,0,0,0.5)";
+    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal").style.background = "rgba(0,0,0,0.5)";
 }
 
 // chiudi modal
